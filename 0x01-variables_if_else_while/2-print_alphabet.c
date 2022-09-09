@@ -11,8 +11,8 @@ int main(void)
 	char casesma;
 
 	for (casesma = 'a'; casesma <= 'z'; casesma++)
-		putchar(casesma);
-		putchar('\n');
+	putchar(casesma);
+	putchar('\n');
 
 	return (0);
 }
