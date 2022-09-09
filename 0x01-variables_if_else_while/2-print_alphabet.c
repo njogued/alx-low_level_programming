@@ -8,10 +8,11 @@
  */
 int main(void)
 {
-	char casesma
+	char casesma;
 
 	for (casesma = 'a'; casesma <= 'z'; casesma++)
 		putchar(casesma);
 		putchar('\n');
+
 	return (0);
 }
