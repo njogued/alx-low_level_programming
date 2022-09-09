@@ -1,5 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	char smallal, e, q;
@@ -7,9 +12,9 @@ int main(void)
 	e = 'e';
 	q = 'q';
 
-	for(smallal = 'a'; smallal <= 'z'; smallal++)
+	for (smallal = 'a'; smallal <= 'z'; smallal++)
 	{
-		if(smallal != e && smallal != q)
+		if (smallal != e && smallal != q)
 			putchar (smallal);
 	}
 	putchar ('\n');
