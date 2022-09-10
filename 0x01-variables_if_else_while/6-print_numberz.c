@@ -11,6 +11,6 @@ int main(void)
 
 	for (numb2 = 0; numb2 < 10; numb2++)
 		putchar(numb2);
-	putchar("\n");
+	putchar('\n');
 	return (0);
 }
