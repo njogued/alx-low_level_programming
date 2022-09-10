@@ -14,6 +14,7 @@ int main(void)
 		putchar(base16 + '0');
 	for (atof = 'a'; atof < 'g'; atof++)
 		putchar(atof);
+	putchar('\n');
 	return (0);
 }
 
