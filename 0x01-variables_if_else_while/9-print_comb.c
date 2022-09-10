@@ -12,7 +12,7 @@ int main(void)
 	for (combi = '0'; combi <= '9'; combi++)
 	{
 		putchar(combi);
-		if (d != 9)
+		if (combi != 9)
 		{
 			putchar(',');
 			putchar(' ');
