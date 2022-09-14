@@ -1,12 +1,17 @@
-#include <stdio.h>
 #include <unistd.h>
-/**
- * main - Entry point
+#include "main.h"
+/*
+ * main function - calls putchar to print _putchar
  *
- * Return: Always 0 (Success)
+ * Return: Always 0 Success
  */
 int main(void)
 {
-	write(1, "_putchar\n", 9);
+	char word[9] = "_putchar";
+	int i;
+
+	for(i = 0; i <= 9; i++)
+		_putchar(word[9]);
+	_putchar('\n');
 	return (0);
 }
