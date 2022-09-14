@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main function - Entry point
+ * main - Entry point
  * calls the print_alphabet function
  * returns Always 0
  */

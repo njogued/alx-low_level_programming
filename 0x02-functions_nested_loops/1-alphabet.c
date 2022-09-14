@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * main - Entry point 
- * print_alphabet function prints from a to z
+ * print_alphabet - Check Description
+ * Description: Prints the alphabet in lower case followed by a new line
  *
- * return alphabets
+ * Return: Nothing
  */
 void print_alphabet(void)
 {

@@ -1,8 +1,10 @@
 #include <unistd.h>
 #include "main.h"
 /**
- * main function - calls putchar to print _putchar
- *main - Entry point
+ * main - Check description
+ * Description: It pirnts the word _putchar followed by a new line
+ * main - Entry point
+ * _putchar - Function in main.h
  * Return: Always 0 Success
  */
 int main(void)
