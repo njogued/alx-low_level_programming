@@ -10,11 +10,10 @@ void print_diagonal(int n)
 
 	if (n >= 1)
 	{
-		for (diag = 0; diag <= n; diag++)
+		for (diag = 0; diag < n; diag++)
 		{
 			_putchar('\\');
 			_putchar('\n');
-			_putchar('\t');
 		}
 	}
 	else
