@@ -1,17 +1,24 @@
 #include "main.h"
+
 /**
- * more_numbers - function to print to 14
- * Return: Always 0
+ * more_numbers - prototype
+ * Return: return value
  */
+
 void more_numbers(void)
 {
-	int a, b;
-	for (a = 1; a <= 14; a++)
+	int i, j;
+
+	for (i = 0; i < 10; i++)
 	{
-		for (b = '0'; b <= '9'; b++)
+		for (j = 0; j <= 14; j++)
 		{
-			_putchar(b);
-			_putchar('\n');
+			if (j > 9)
+			{
+				_putchar((j / 10) + '0');
+			}
+			_putchar((j % 10) + '0');
 		}
+		_putchar('\n');
 	}
 }
