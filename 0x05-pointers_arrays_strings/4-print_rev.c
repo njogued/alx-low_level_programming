@@ -9,7 +9,7 @@ void print_rev(char *s)
 	int a, i;
 
 	a = 0;
-	for (i = 0; a < s[i]; i++)
+	for (i = 1; a < s[i]; i++)
 	{
 		i = i;
 	}
@@ -18,4 +18,5 @@ void print_rev(char *s)
 		_putchar(s[i]);
 		i--;
 	}
+	_putchar('\n');
 }
