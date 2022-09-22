@@ -16,11 +16,6 @@ int _strcmp(char *s1, char *s2)
 	for (y = 0; s2[y] != '\0'; y++)
 	{
 	}
-	if (x > y)
-		n = 1;
-	else if (x < y)
-		n = -1;
-	else
-		n = 0;
+	n = x - y;
 	return (n);
 }
