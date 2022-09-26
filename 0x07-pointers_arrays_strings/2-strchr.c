@@ -7,12 +7,18 @@
  */
 char *_strchr(char *s, char c)
 {
+	int a;
 
-	while (*s)
+	while (1)
 	{
-		if (c == *s)
-			return (s);
-		s++;
+		a = *s++;
+		if (a == c)
+		{
+			return (s - 1);
+		}
+		if (a == 0)
+		{
+			return (NULL);
+		}
 	}
-	return (s);
 }
