@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stddef.h>
 /**
  * _strchr - Function to find first occurrence
  * @s: String
@@ -16,12 +15,8 @@ char *_strchr(char *s, char c)
 	{
 		if (s[i] == c)
 		{
-			break;
 			return (ptr + i);
 		}
-		else if (s[i] != c)
-		{
-			return('\0');
-		}
 	}
+	return('\0');
 }
