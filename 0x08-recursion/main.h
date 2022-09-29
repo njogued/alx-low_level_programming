@@ -1,6 +1,10 @@
 #ifndef FILE_MAIN
 #define FILE_MAIN
 
+int check(char *s, int start, int end, int pair);
+int last_index(char *s);
+int checkLast(char *s, int i);
+int checker(char *s1, char *s2, int a, int b, int wildUsed);
 int nprime(int num, int i);
 int _putchar(char c);
 void _puts_recursion(char *s);
