@@ -1,29 +1,75 @@
 #include <stdio.h>
+
+#include <stdlib.h>
+
+#include <ctype.h>
+
+
+
 /**
- * main - Function
- * @argv: Argument vector
- * @argc: Argument counter
- * Return: Nothing
- */
+ *
+ *  * main - sum of  the args
+ *
+ *   * @argc: Argument count
+ *
+ *    * @argv: Array of argument strings
+ *
+ *     * Return: 0 for successful exit
+ *
+ *      */
+
+
+
 int main(int argc, char *argv[])
+
+
+
 {
-	int sum, i, j;
 
-	sum = 0;
+	int i = 0;
 
-	for (i = 1; i < argc; i++)
+	int sum = 0;
+
+
+
+	if (argc == 1)
+
 	{
-		for (j = 0; argv[i][j] != '\0'; j++)
-		{
-			if (!isdigit(argv[i][j]))
-			{
-				printf("Error\n");
-				return (1);
-			}
-		}
-		sum += atoi(argv[i]);
+
+		printf("0\n");
+
 	}
 
-	printf("%d\n", sum);
+	else
+
+	{
+
+		for (i = 1; i < argc; i++)
+
+		{
+
+			if (!isdigit(*argv[i]))
+
+			{
+
+				printf("Error\n");
+
+			}
+
+			else
+
+			{
+
+				sum += atoi(argv[i]);
+
+			}
+
+		}
+
+		printf("%d\n", sum);
+
+	}
+
 	return (0);
+
 }
