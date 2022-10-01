@@ -1,7 +1,9 @@
 #include <stdio.h>
 /**
  * main - Function
- * @argv - Argument vector
+ * @argc: Argument counter
+ * @argv: Argument vector
+ * Return: Zero
  */
 int main(int argc __attribute__((unused)), char *argv[])
 {
