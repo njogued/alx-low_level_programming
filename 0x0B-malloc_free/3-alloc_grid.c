@@ -2,7 +2,7 @@
 /**
  * alloc_grid - Returns to pointer to 2d array
  * @width: Width of array (dimension 1)
- * @length: length of array (dimension 2)
+ * @height: length of array (dimension 2)
  * Return: The pointer to the array
  */
 int **alloc_grid(int width, int height)
