@@ -27,14 +27,15 @@ int main(int argc, char *argv[])
 	n = 0;
 	while (n < argc)
 	{
-		n++;
 		array[n] = argv[n];
-		printf("%s\n", array[n]);
+		printf("The string at index: %d is %s\n", n, array[n]);
+		n++;
 	}
 	printf("The value of n: %d and argc is: %d\n", n, argc);
+	printf("The global var: ");
 	print();
-	printf("%d\n", (atoi(argv[n-2]) + atoi(argv[n-1])));
-
+	printf("The sum using atoi: %d\n", (atoi(argv[n-2]) + atoi(argv[n-1])));
+	
 	//printarray(array, n);
 	free(array);
 	return (0);
