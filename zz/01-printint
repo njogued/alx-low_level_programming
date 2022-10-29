@@ -1,0 +1,9 @@
+else if (format[i] == 'd')
+            {
+                intgr = va_arg(list, int);
+                if(intgr < 10)
+                {
+                    _putchar(intgr + '0');
+                }
+            }
+

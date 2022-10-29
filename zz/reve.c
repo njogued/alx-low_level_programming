@@ -7,8 +7,6 @@ void main(void)
 {
 	int array[] = {1, 3, 4, 69, 420};
 	int i, n = 5;
-	int *prt  = array;
-	printf("Size of array: %ld\n", sizeof(*prt)/sizeof(int));
 
 	rever(array);
 
