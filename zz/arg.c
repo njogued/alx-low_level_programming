@@ -6,12 +6,12 @@ void print()
 	printf("%d\n", GLBL);
 }
 
-/*void printarray(char **ptra, int bound)
+/*void printarray(char *ptra, int bound)
 {
 	int i;
 	for (i = 0; i < bound; i++)
 	{
-		printf("%s\n", **ptra[i]);
+		printf("%s\n", ptra[i]);
 	}
 }
 */
@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 	print();
 	printf("The sum using atoi: %d\n", (atoi(argv[n-2]) + atoi(argv[n-1])));
 	
-	//printarray(array, n);
+	/*printarray(&array, n);*/
 	free(array);
 	return (0);
 }
