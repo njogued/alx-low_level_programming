@@ -1,3 +1,10 @@
+#include "main.h"
+/**
+ * create_file - file to create file
+ * @filename: file name
+ * @text_content: text content
+ * Return: 1 on success and -1 if if failed
+ */
 int create_file(const char *filename, char *text_content)  
 {                                                          
 	int fd, file;                                      
@@ -10,8 +17,7 @@ int create_file(const char *filename, char *text_content)
 	if (!text_content)                                 
 		text_content = "";                         
 
-	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S
-			_IRUSR | S_IWUSR);                                         
+	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);                                         
 
 	if (fd < 0)                                        
 		return (-1);                               
