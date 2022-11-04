@@ -13,7 +13,7 @@ int binint(const char* bina)
         {
             itg += base;
         }
-        base *= 2;
+        base = base >> 1;
         i--;
     }
     return(itg);
