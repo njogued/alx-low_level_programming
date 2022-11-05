@@ -1,11 +1,7 @@
-Sat 05 Nov 2022 02:31:38 AM PDT
-commands.sh
-morn.sh
-pause.sh
-txtfile.txt
-Sat 05 Nov 2022 02:31:59 AM PDT
-commands.sh
-file.txt
-morn.sh
-pause.sh
-txtfile.txt
+Sat 05 Nov 2022 03:28:07 AM PDT
+00-push.sh
+0-sleepoutput.sh
+1-read.sh
+2-variables.sh
+3-math.sh
+README.md
