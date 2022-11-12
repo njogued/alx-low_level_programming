@@ -7,7 +7,7 @@ int main()
 	for(i=0; str[i]!='\0'; i++)
 	{
 		if(str[i] == chr[0])
-			str[i]='\0'; /*apa after the first for loop ndio napotea any help*/
+			str[i]='\0';
 	}
 	for(j=0; j<i; j++)
 		if(str[j] != '\0')
