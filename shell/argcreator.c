@@ -15,7 +15,7 @@
 int main(void)
 {
 	char *tok, *line, **split_args;
-	char *line1 = "/bin/ls -a -l";
+	char *line1 = "/bin/ls -al /usr/";
 	int i = 0, u;
 	split_args = malloc(sizeof(strlen(line)));
 	if (split_args == 0)

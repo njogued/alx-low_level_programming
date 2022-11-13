@@ -1,10 +1,10 @@
 #include "shell.h"
 int ext(char *buffer)
 {
-	char *exti = "exit";
-	if(strcmp(exti, buffer) == 0)
+	char *exti = "exit\n", *eof = "EOF\n";
+	if(strcmp(exti, buffer) == 0 || strcmp(eof, buffer) == 0)
 	{
-		printf("Let's exit");
+		printf("Let's exit, bye\n");
 		return(-1);
 	}
 	return(0);
