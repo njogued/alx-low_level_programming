@@ -1,0 +1,4 @@
+#!/bin/bash
+cfile=$1
+execfile=$2
+gcc -Wall -Werror -pedantic -std=gnu89 -Wextra $cfile -o $execfile
