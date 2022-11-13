@@ -1,8 +1,14 @@
 #include <stdio.h>
 #include <unistd.h>
-int main()
+int main(void)
 {
-	char *ave[] = {"/bin/ls", "/usr/", NULL};
-	execv(ave[0], ave);
-	return (0);
+    char *argv[] = {"/bin/ls", "-l", "/usr/", NULL};
+
+    printf("Before execve\n");
+    if (execve(argv[0], argv, NULL) == -1)
+    {
+        perror("Error:");
+    }
+    printf("After execve\n");
+    return (0);
 }
