@@ -5,9 +5,9 @@
 #include <stdio.h>
 int main(void)
 {
-	char *str[] = {"ls -l -a", " "};
+	char *str[] = {"ls -l", " "};
 	char *tok, *catdest, *tokens[5], *args[3], *bin = "/bin/";
-	int status, u, i = 0;
+	int status, x, u, i = 0;
 	pid_t pid;
 	char *str1 = malloc(20);
 	char *bin2 = malloc(10);
@@ -29,11 +29,20 @@ int main(void)
 	}
 	catdest = strcat(bin2, tokens[0]);
 	printf("%s\n", catdest);
-	i = strlen(catdest);
-	printf("%d\n", i);
-	args[0] = catdest;
-	args[1] = tokens[1];
-	args[2] = NULL;
+	x = strlen(catdest);
+	printf("%d\n", x);
+	if (i == 1)
+	{
+		args[0] = catdest;
+		args[1] = NULL;
+		args[2] = NULL;
+	}
+	else if (i > 1)
+	{
+		args[0] = catdest;
+		args[1] = tokens[1];
+		args[2] = NULL;
+	}
 	pid = fork();
 	if (pid == 0)
 	{
@@ -43,8 +52,8 @@ int main(void)
 	{
 		wait(&status);
 	}
-	free(str1);
-	free(bin2);
+	/*free(str1);
+	free(bin2);*/
 	printf("Exit: %s\n", tok);
 	return (0);
 }
