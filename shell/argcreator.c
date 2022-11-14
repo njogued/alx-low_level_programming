@@ -15,14 +15,14 @@
 int main(void)
 {
 	char *tok, *line, **split_args;
-	char *line1 = "/bin/ls -al /usr/";
+	char *line1 = "/bin/ls -a -l";
 	int i = 0, u;
-	split_args = malloc(sizeof(strlen(line)));
+	split_args = malloc(sizeof(strlen(line1)));
 	if (split_args == 0)
 	{
 		perror("Failed to allocate");
 	}
-	line =  malloc(sizeof(char) * 10);
+	line =  malloc(sizeof(char) * strlen(line1));
 	if (line == 0)
 	{
 		perror("Failed to allocate memory");
@@ -50,5 +50,6 @@ int main(void)
 		perror("Failed to execute command");
 		return(-1);
 	}
+	free(split_args);
 	return (0);
 }
