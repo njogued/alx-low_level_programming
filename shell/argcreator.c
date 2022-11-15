@@ -15,7 +15,7 @@
 int main(void)
 {
 	char *tok, *line, **split_args;
-	char *line1 = "/bin/ls -a -l";
+	char *line1 = "/bin/ls -a /alx-low_level_programming/shell\n";
 	int i = 0, u;
 	split_args = malloc(sizeof(strlen(line1)));
 	if (split_args == 0)
@@ -27,11 +27,11 @@ int main(void)
 	{
 		perror("Failed to allocate memory");
 	}
-	strcpy(line, line1);
+	strncpy(line, line1, strlen(line1) - 1);
         tok = strtok(line, " ");
         while (tok)
         {
-                split_args[i] = tok;
+                split_args[i] = strdup(tok);
                 i++;
                 tok = strtok(NULL, " ");
         }
