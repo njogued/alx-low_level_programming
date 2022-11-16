@@ -6,6 +6,7 @@
 int checkfile(char *file);
 char *check_path(char *path, char *av);
 char *joiner(char *str1, char *str2);
+extern char ** environ;
 int main(void)
 {
 	char *path = getenv("PATH");
@@ -18,7 +19,7 @@ int main(void)
 	if(fpath)
 	{
 		av[0] = fpath;
-		execve(av[0], av, NULL);
+		execve(av[0], av, environ);
 	}
 	return (0);
 }
