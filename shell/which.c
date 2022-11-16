@@ -1,27 +1,71 @@
-#include <stdlib.h>
-#include <sys/stat.h>
-#include <stdio.h>
-#include <string.h>
-#include <unistd.h>
-int checkfile(char *file);
-char *check_path(char *path, char *av);
-char *joiner(char *str1, char *str2);
-extern char ** environ;
+#include "shell1.h"
+
 int main(void)
 {
 	char *path = getenv("PATH");
-	char **av, *fpath;
-	printf("%s\n", path);
-	av =  malloc(sizeof(char *) * 2);
-	av[0] = strdup("clear");
-	av[1] = NULL;
-	fpath = check_path(path, av[0]);
-	if(fpath)
-	{
-		av[0] = fpath;
-		execve(av[0], av, environ);
+	char *fpath, *line_got, **args;
+	int iterator = 0, len1 = 0;
+        while (1)
+        {
+		putchar('$');
+		putchar(' ');
+		line_got = strdup(readline());
+		printf("line_got: %s\n", line_got);
+		if(!line_got)
+		{
+			break;
+		}
+		while(line_got[iterator] != '\0')
+		{
+			if (line_got[iterator] == ' ')
+			{
+				len1++;
+			}
+			iterator++;
+		}
+		args = malloc(sizeof(char *) * (len1 + 2));
+		args = _strtok(line_got, len1);
+		fpath = check_path(path, args[0]);
+		if(fpath)
+		{
+			args[0] = fpath;
+			execve(args[0], args, environ);
+		}
 	}
 	return (0);
+}
+char **_strtok(char *input_line, int len)
+{
+	char *token, **arguments;
+	int iterator = 0;
+	arguments = malloc(sizeof(char *) * (len + 2));
+	token = strtok(input_line, " ");
+	while (token)
+	{
+		arguments[iterator] = token;
+		iterator++;
+		strtok(NULL, " ");
+	}
+	arguments[iterator] = NULL;
+	return (arguments);
+}
+char *readline(void)
+{
+	char *clean_buffer, *buffer = NULL;
+	size_t bufsize = 0;
+	int n = 0;
+	n = getline(&buffer, &bufsize, stdin);
+	if (n == -1)
+	{
+		
+		putchar('\n');
+		return NULL;
+	}
+	clean_buffer = malloc(sizeof(char) * n-1);
+	clean_buffer = strndup(buffer, n-1);
+	/*substitute strndup (not allowed)*/
+	/*check exit condition(strcmp)*/
+	return (clean_buffer);
 }
 char *check_path(char *path, char *av)
 {
@@ -45,10 +89,7 @@ char *joiner(char *str1, char *str2)
 	char *file_path = NULL;
 
 	while (str1[i++] != '\0');
-	printf("str1 is: %s, and i is: %d\n", str1, i);
 	while (str2[j++] != '\0');
-	printf("str2 is: %s, and j is: %d\n", str2, j);
-	printf("The total is: %d\n", i+j);
 	file_path = malloc(sizeof(char) * (i+j));
 	j = 0;
 	i = 0;

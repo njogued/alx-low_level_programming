@@ -25,7 +25,7 @@ int main(void) {
 		if (n == -1)
 		{
 			perror("Exiting");
-			break;
+		break;
 		} 
 		printf("%s\n", buffer);
 		i = strlen(buffer);

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-char read_line(void)
+char *read_line(void)
 {
 	char *t1, *line = malloc(100);
 	size_t bufsize = 100;
