@@ -2,11 +2,13 @@
 
 int main(void)
 {
-	char *path = getenv("PATH");
+	char *path;
 	char *fpath, *line_got, **args;
 	int iterator = 0, len1 = 0;
+	pid_t my_pid;
         while (1)
         {
+		path = getenv("PATH");
 		putchar('$');
 		putchar(' ');
 		line_got = strdup(readline());
@@ -29,7 +31,22 @@ int main(void)
 		if(fpath)
 		{
 			args[0] = fpath;
-			execve(args[0], args, environ);
+			my_pid = fork();
+			if(my_pid == 0)
+			{
+				if(execve(args[0], args, environ) == -1)
+					perror("./shell");
+			}
+			else
+			{
+				wait(NULL);
+				free(args);
+			}
+		}
+		else if(fpath == NULL)
+		{
+			free(args);
+			perror("./shell");
 		}
 	}
 	return (0);
@@ -44,7 +61,7 @@ char **_strtok(char *input_line, int len)
 	{
 		arguments[iterator] = token;
 		iterator++;
-		strtok(NULL, " ");
+		token = strtok(NULL, " ");
 	}
 	arguments[iterator] = NULL;
 	return (arguments);
@@ -57,14 +74,13 @@ char *readline(void)
 	n = getline(&buffer, &bufsize, stdin);
 	if (n == -1)
 	{
-		
-		putchar('\n');
-		return NULL;
+		return (NULL);
 	}
 	clean_buffer = malloc(sizeof(char) * n-1);
 	clean_buffer = strndup(buffer, n-1);
 	/*substitute strndup (not allowed)*/
 	/*check exit condition(strcmp)*/
+	free(buffer);
 	return (clean_buffer);
 }
 char *check_path(char *path, char *av)
@@ -73,6 +89,7 @@ char *check_path(char *path, char *av)
 	path_i = strtok(path, ":");
 	while (path_i)
 	{
+		filepath = malloc(sizeof(path_i)+sizeof(char)+sizeof(av));
 		filepath = joiner(path_i, av);
 		printf("%s\n", filepath);
 		if(checkfile(filepath) == 0)
@@ -81,6 +98,8 @@ char *check_path(char *path, char *av)
 		}
 		path_i = strtok(NULL, ":");
 	}
+	free(path_i);
+	free(filepath);
 	return (NULL);
 }
 char *joiner(char *str1, char *str2)

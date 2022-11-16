@@ -1,6 +1,7 @@
 #ifndef SHELL1_H
 #define SHELL1_H
 
+#include <sys/wait.h>
 #include <stdlib.h>
 #include <sys/stat.h>
 #include <stdio.h>
