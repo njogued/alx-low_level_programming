@@ -1,11 +1,15 @@
 #include <stdio.h>
-/*
- * main - function to compute the sum of numbers
- * Return: Always 0
+/**
+ * main - Entry point
+ *
+ * Description - compute sum of numbers
+ *
+ * Return: Always 0 (Success)
  */
-int main()
+int main(void)
 {
 	int i, j;
+
 	i = j = 0;
 
 	for (; i <= 1024; i++)

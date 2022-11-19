@@ -1,0 +1,4 @@
+./varg
+make
+file
+i is: 3, while argc is: 3

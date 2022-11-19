@@ -9,6 +9,7 @@ int main(void)
         while (1)
         {
 		path = getenv("PATH");
+		printf("%s\n", path);
 		putchar('$');
 		putchar(' ');
 		line_got = strdup(readline());
@@ -86,6 +87,8 @@ char *readline(void)
 char *check_path(char *path, char *av)
 {
 	char *filepath, *path_i;
+	if(checkfile(av) == 0)
+		return(av);
 	path_i = strtok(path, ":");
 	while (path_i)
 	{
