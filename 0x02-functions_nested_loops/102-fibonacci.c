@@ -9,13 +9,13 @@ int main(void)
 	long int sum, temp, fib[2] = {1, 2};
 
 	printf("1, 2, ");
-	for (iterator = 0; iterator <= 50; iterator++)
+	for (iterator = 0; iterator <= 47; iterator++)
 	{
 		sum = fib[0] + fib[1];
 		temp = fib[1];
 		fib[1] = sum;
 		fib[0] = temp;
-		if (iterator != 50)
+		if (iterator != 47)
 		{
 			printf("%ld, ", sum);
 		}
