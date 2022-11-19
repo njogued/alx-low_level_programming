@@ -1,3 +1,4 @@
+void t_t(int prod);
 void print_times_table(int n);
 int _putchar(char c);
 void print_alphabet(void);
