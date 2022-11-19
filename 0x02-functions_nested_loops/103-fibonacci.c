@@ -6,7 +6,7 @@
 int main(void)
 {
 	int iterator;
-	long int even_sum = 0, sum, temp, fib[2] = {1, 2};
+	long int even_sum = 0, sum, temp, fib[2] = {0, 1};
 
 	for (iterator = 0; iterator <= 47; iterator++)
 	{
@@ -23,7 +23,6 @@ int main(void)
 		fib[1] = sum;
 		fib[0] = temp;
 	}
-	printf("\n");
 	printf("%ld\n", even_sum);
 	return (0);
 }
