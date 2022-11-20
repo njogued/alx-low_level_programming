@@ -81,6 +81,21 @@ int check_prime(int prime)
 	
 }
 /**
+ * free_list - frees a linked list
+ * @head: list to free
+ */
+
+void free_list(List_Nos *head)
+{
+	List_Nos *temp;
+	while (head != NULL)
+	{
+		temp = head;
+		head = head->node;
+		free(temp);
+	}
+}
+/**
  * main - Entry point
  * The main function takes input from user
  * Passes the input to add_node which adds it to linked list
@@ -108,5 +123,7 @@ int main(void)
 		}
 	}
 	print_nos(head);
+	free_list(head);
+	free(buffer);
 	return (0);
 }
