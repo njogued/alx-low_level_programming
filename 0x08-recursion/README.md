@@ -34,9 +34,25 @@ Write a function that returns the factorial of a given number.
 Write a function that returns the value of x raised to the power of y.
 - Prototype: int \_pow_recursion(int x, int y);
 - If y is lower than 0, the function should return -1
-FYI: The standard library provides a different function: pow. Run ``` man pow ``` to learn more.
+> FYI: The standard library provides a different function: pow. Run ``` man pow ``` to learn more.
 
-## Task 5.<a name="task5"></a>
-## Task 6.<a name="task6"></a>
-## Task 7.<a name="task7"></a>
-## Task 8.<a name="task8"></a>
+## Task 5.<a name="task5"></a> Your subconscious is looking for the dreamer
+Write a function that returns the natural square root of a number.
+- Prototype: int _sqrt_recursion(int n);
+- If n does not have a natural square root, the function should return -1
+> FYI: The standard library provides a different function: sqrt. Run man sqrt to learn more.
+
+## Task 6.<a name="task6"></a> Inception. Is it possible?
+Write a function that returns 1 if the input integer is a prime number, otherwise return 0.
+- Prototype: int is_prime_number(int n);
+
+## Task 7.<a name="task7"></a> They say we only use a fraction of our brain's true potential. Now that's when we're awake. When we're asleep, we can do almost anything
+Write a function that returns 1 if a string is a palindrome and 0 if not.
+- Prototype: int is_palindrome(char *s);
+- An empty string is a palindrome
+
+## Task 8.<a name="task8"></a> Inception. Now, before you bother telling me it's impossible...
+Write a function that compares two strings and returns 1 if the strings can be considered identical, otherwise return 0.
+- Prototype: int wildcmp(char *s1, char *s2);
+- s2 can contain the special character *.
+- The special char * can replace any string (including an empty string)
