@@ -1,4 +1,4 @@
-More Functions and Loops
+# More Functions and Loops
 0. [Task 0](#task0)
 1. [Task 1](#task1)
 2. [Task 2](#task2)
