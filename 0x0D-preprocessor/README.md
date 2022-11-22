@@ -18,9 +18,14 @@
 
 ### Resources
 [The C Pre-processor](https://www.cprogramming.com/tutorial/cpreprocessor.html)
+
 [Object-like Macros](https://gcc.gnu.org/onlinedocs/gcc-5.1.0/cpp/Object-like-Macros.html#Object-like-Macros)
+
 [Macro Arguments](https://gcc.gnu.org/onlinedocs/gcc-5.1.0/cpp/Macro-Arguments.html#Macro-Arguments)
+
 [Standard Predefined Macros](https://gcc.gnu.org/onlinedocs/gcc-5.1.0/cpp/Standard-Predefined-Macros.html#Standard-Predefined-Macros)
+
 [Common Predefined Macros](https://gcc.gnu.org/onlinedocs/gcc-5.1.0/cpp/Common-Predefined-Macros.html#Common-Predefined-Macros)
+
 [Pre-processor Directives](https://www.youtube.com/watch?v=X6HiYbY3Uak)
 
