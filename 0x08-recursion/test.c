@@ -1,19 +1,26 @@
 #include <stdio.h>
-int sum_a(int x);
-int main()
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int _strlen_recursion(char *s)
 {
-	int num = 10;
-	int all;
-	all = sum_a(num);
-	printf("num + num - 1 + num - 2 + ... = %d\n", all);
-	return (0);
-}
-int sum_a(int x)
-{
-	int sum;
-	if (x = 1)
+	int len;
+	if (*s == '\0')
+		return (0);
+	else
 	{
-		return(1);
+		len = 1 + _strlen_recursion(s+1);
 	}
-	return(x + (x - 1));
+	return(len);
+}
+int main(void)
+{
+    int n;
+
+    n = _strlen_recursion("Corbin Coleman");
+    printf("%d\n", n);
+    return (0);
 }
