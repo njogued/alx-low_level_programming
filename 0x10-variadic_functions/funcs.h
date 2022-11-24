@@ -1,6 +1,7 @@
 #ifndef FUNCS_H
 #define FUNCS_H
 
+#include <string.h>
 #include <stdio.h>
 #include <stdargs.h>
 
