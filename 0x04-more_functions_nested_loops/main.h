@@ -1,3 +1,4 @@
+int _absl(int x);
 void print_number(int n);
 int _isdigit(int c);
 int _isupper(int c);
