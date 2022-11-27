@@ -1,4 +1,6 @@
 #!/bin/python
+# run this script using the python3 intro.py command
+# To run this script and enter interactive mode, use python -i intro.py
 
 print("Hello world")
 a = 5
