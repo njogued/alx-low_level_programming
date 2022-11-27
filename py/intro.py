@@ -14,8 +14,10 @@ def _sum(i, j):
 print("Enter two digits")
 dig1 = input("Digit 1: ")
 dig2 = input("Digit 2: ")
-print(_sum(dig1, dig2))
-sm3 = _sum(dig1, dig2)
+dig1i = int(dig1)
+dig2i = int(dig2)
+print(_sum(dig1i, dig2i))
+sm4 = _sum(dig1i, dig2i)
 def smIF(sm3):
 	if sm3 < 10:
 		print("Single Digit")
@@ -23,9 +25,4 @@ def smIF(sm3):
 		print("Double Digit")
 	else:
 		print("More than two digits")
-my_range1 = range(1, 9)
-my_range2 = range(10, 100)
-for sm3 in my_range1:
-	print(sm3)
-for sm3 in my_range2:
-	print(sm3)
+smIF(sm4)
