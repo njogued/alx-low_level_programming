@@ -1,19 +1,21 @@
-## 0x01A - Hash table implementation
+## 0x01A - Hash Tables Implementation in C
 
 ### Task 0. 0. >>> ht = {}
-Write a function that creates a hash table.
-- Prototype: hash_table_t \``*hash_table_create(unsigned long int size);``
+**Write a function that creates a hash table.**
+- Prototype: ``hash_table_t *hash_table_create(unsigned long int size);``
+```
 - where size is the size of the array
+```
 - Returns a pointer to the newly created hash table
 - If something went wrong, your function should return ``NULL``
 
 ### Task 1. djb2
-Write a hash function implementing the djb2 algorithm.
+**Write a hash function implementing the djb2 algorithm.**
 - Prototype: unsigned long ``int hash_djb2(const unsigned char *str);``
 - You are allowed to copy and paste [this function](https://gist.github.com/papamuziko/7bb52dfbb859fdffc4bd0f95b76f71e8)
 
 ### Task 2. key -> index
-Write a function that gives you the index of a key.
+**Write a function that gives you the index of a key.**
 - Prototype: ``unsigned long int key_index(const unsigned char *key, unsigned long int size);``
 ```
 where key is the key
@@ -34,20 +36,28 @@ key is the key. key can not be an empty string
 - Returns: 1 if it succeeded, 0 otherwise
 - In case of collision, add the new node at the beginning of the list
 
+### Task 4. >>> ht['betty']
+**Write a function that retrieves a value associated with a key.**
+- Prototype: ``char *hash_table_get(const hash_table_t *ht, const char *key);``
+```
+where ht is the hash table you want to look into
+and key is the key you are looking for
+```
+Returns the value associated with the element, or NULL if key couldn’t be found
 
+### Task 5.>>> print(ht)
+**Write a function that prints a hash table.**
+Prototype: ``void hash_table_print(const hash_table_t *ht);``
+```
+where ht is the hash table
+```
+- You should print the key/value in the order that they appear in the array of hash table
+- Order: array, list
+- If ht is NULL, don’t print anything
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### Task 6. >>> del ht
+**Write a function that deletes a hash table.**
+- Prototype: ``void hash_table_delete(hash_table_t *ht);``
+```
+where ht is the hash table
+```
