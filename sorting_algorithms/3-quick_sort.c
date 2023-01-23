@@ -38,10 +38,7 @@ void quick_sort(int *array, size_t size)
 		printf("lOW: %ld\n", low);
 		}
 	}
-	if(low != pivot - 1)
-	{
-		swap(array, low, pivot);
-	}
+	swap(array, low, pivot);
 	print_array(array, size);
 
 }
