@@ -1,6 +1,6 @@
 CC=gcc
 SRC=school.c main.c
-OBJ=school.o main.o
+OBJ:=$(patsubst %.c,%.o,$(wildcard *.c))
 NAME=school
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
