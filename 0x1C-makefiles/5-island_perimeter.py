@@ -4,14 +4,14 @@ Contains solution to the perimeter problem
 '''
 
 
-def island_perimeter(island):
+def island_perimeter(grid):
     '''
     Function to calculate the perimeter of an island
     '''
     perimeter = 0
     land_mass = set()
     row_count = 0
-    for row in island:
+    for row in grid:
         row_count += 1
         col_count = 0
         for column in row:
